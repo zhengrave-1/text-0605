@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+
+//写一个函数判断一个数是否是素数
+void judge(int x)
+{
+	int j = 0;
+	for (j = 2; j <x; j++)
+	{
+		if (x % j == 0)
+		{
+			printf("该数字不是素数\n");
+			break;
+		}	
+	}
+    if (j == x)
+		{
+			printf("该数字是素数\n");
+		}
+}
+int main()
+{
+	int a = 0;
+	printf("请输入要进行判断的数：");
+	scanf("%d", &a);
+	judge(a);
+	return 0;
+}
